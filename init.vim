@@ -152,6 +152,12 @@ nnoremap <Leader>/ :Ack!<Space>
 nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]q :cnext<CR>
 
+" Coc completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 colorscheme fahrenheit
 set background=dark
 
